@@ -28,8 +28,8 @@ import java.util.Optional;
 
 
 public class DrivetrainSubsystem implements Subsystem, UpdateManager.Updatable {
-    public static final double TRACKWIDTH = 1.0;
-    public static final double WHEELBASE = 1.0;
+    public static final double TRACKWIDTH = 0.34;
+    public static final double WHEELBASE = 0.34;
 
     public static final DrivetrainFeedforwardConstants FEEDFORWARD_CONSTANTS = new DrivetrainFeedforwardConstants(
             0.042746,

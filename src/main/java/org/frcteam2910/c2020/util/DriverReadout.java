@@ -20,10 +20,6 @@ public class DriverReadout {
         loadingBayChooser.setDefaultOption("Left", Side.LEFT);
         loadingBayChooser.addOption("Right", Side.RIGHT);
 
-        tab.addNumber("Pressure", () -> container.getSuperstructure().getCurrentPressure())
-                .withSize(2, 2)
-                .withPosition(0, 0)
-                .withWidget(BuiltInWidgets.kDial);
         tab.add("Autonomous Mode", container.getAutonomousChooser().getAutonomousModeChooser())
                 .withSize(2, 1)
                 .withPosition(2, 0);

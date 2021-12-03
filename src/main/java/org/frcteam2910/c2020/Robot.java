@@ -34,10 +34,7 @@ public class Robot extends TimedRobot {
 
     private RobotContainer robotContainer = new RobotContainer();
     private UpdateManager updateManager = new UpdateManager(
-            robotContainer.getDrivetrainSubsystem(),
-            robotContainer.getFeederSubsystem(),
-            robotContainer.getIntakeSubsystem(),
-            robotContainer.getShooterSubsystem()
+            robotContainer.getDrivetrainSubsystem()
     );
 
     static {
@@ -178,9 +175,6 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-        new HomeHoodMotorCommand(robotContainer.getShooterSubsystem()).schedule();
-
-        robotContainer.getVisionSubsystem().setLedMode(Limelight.LedMode.DEFAULT);
         robotContainer.getDrivetrainSubsystem().resetPose(RigidTransform2.ZERO);
         //robotContainer.getDrivetrainSubsystem().resetGyroAngle(Rotation2.ZERO);
 
@@ -204,10 +198,5 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
-        if(!robotContainer.getShooterSubsystem().isHoodHomed()){
-            new HomeHoodMotorCommand(robotContainer.getShooterSubsystem()).schedule();
-        }
-
-        new HomeClimberCommand(robotContainer.getClimberSubsystem(), robotContainer.getSuperstructure()).schedule();
     }
 }
