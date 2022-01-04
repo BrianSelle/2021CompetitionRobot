@@ -17,10 +17,6 @@ import org.frcteam2910.common.robot.input.XboxController;
 import java.io.IOException;
 
 public class RobotContainer {
-    private static final double HOOD_MANUAL_ADJUST_INTERVAL = Math.toRadians(0.5);
-    private static final double FLYWHEEL_MANUAL_ADJUST_INTERVAL = 50.0;
-
-
     private final XboxController primaryController = new XboxController(Constants.PRIMARY_CONTROLLER_PORT);
 
     private final DrivetrainSubsystem drivetrainSubsystem = new DrivetrainSubsystem();

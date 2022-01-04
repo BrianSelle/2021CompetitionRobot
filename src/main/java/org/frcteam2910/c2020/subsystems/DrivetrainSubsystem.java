@@ -1,6 +1,7 @@
 package org.frcteam2910.c2020.subsystems;
 
 import com.google.errorprone.annotations.concurrent.GuardedBy;
+import com.swervedrivespecialties.swervelib.Mk3SwerveModuleHelper;
 import com.swervedrivespecialties.swervelib.Mk4SwerveModuleHelper;
 import com.swervedrivespecialties.swervelib.SwerveModule;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -101,41 +102,41 @@ public class DrivetrainSubsystem implements Subsystem, UpdateManager.Updatable {
 
         ShuffleboardTab tab = Shuffleboard.getTab("Drivetrain");
 
-        SwerveModule frontLeftModule = Mk4SwerveModuleHelper.createFalcon500(
+        SwerveModule frontLeftModule = Mk3SwerveModuleHelper.createFalcon500(
                 tab.getLayout("Front Left Module", BuiltInLayouts.kList)
                         .withPosition(2, 0)
                         .withSize(2, 4),
-                Mk4SwerveModuleHelper.GearRatio.L4,
+                Mk3SwerveModuleHelper.GearRatio.FAST,
                 Constants.DRIVETRAIN_FRONT_LEFT_DRIVE_MOTOR,
                 Constants.DRIVETRAIN_FRONT_LEFT_ANGLE_MOTOR,
                 Constants.DRIVETRAIN_FRONT_LEFT_ENCODER_PORT,
                 Constants.DRIVETRAIN_FRONT_LEFT_ENCODER_OFFSET
         );
-        SwerveModule frontRightModule = Mk4SwerveModuleHelper.createFalcon500(
+        SwerveModule frontRightModule = Mk3SwerveModuleHelper.createFalcon500(
                 tab.getLayout("Front Right Module", BuiltInLayouts.kList)
                         .withPosition(4, 0)
                         .withSize(2, 4),
-                Mk4SwerveModuleHelper.GearRatio.L4,
+                Mk3SwerveModuleHelper.GearRatio.FAST,
                 Constants.DRIVETRAIN_FRONT_RIGHT_DRIVE_MOTOR,
                 Constants.DRIVETRAIN_FRONT_RIGHT_ANGLE_MOTOR,
                 Constants.DRIVETRAIN_FRONT_RIGHT_ENCODER_PORT,
                 Constants.DRIVETRAIN_FRONT_RIGHT_ENCODER_OFFSET
         );
-        SwerveModule backLeftModule = Mk4SwerveModuleHelper.createFalcon500(
+        SwerveModule backLeftModule = Mk3SwerveModuleHelper.createFalcon500(
                 tab.getLayout("Back Left Module", BuiltInLayouts.kList)
                         .withPosition(6, 0)
                         .withSize(2, 4),
-                Mk4SwerveModuleHelper.GearRatio.L4,
+                Mk3SwerveModuleHelper.GearRatio.FAST,
                 Constants.DRIVETRAIN_BACK_LEFT_DRIVE_MOTOR,
                 Constants.DRIVETRAIN_BACK_LEFT_ANGLE_MOTOR,
                 Constants.DRIVETRAIN_BACK_LEFT_ENCODER_PORT,
                 Constants.DRIVETRAIN_BACK_LEFT_ENCODER_OFFSET
         );
-        SwerveModule backRightModule = Mk4SwerveModuleHelper.createFalcon500(
+        SwerveModule backRightModule = Mk3SwerveModuleHelper.createFalcon500(
                 tab.getLayout("Back Right Module", BuiltInLayouts.kList)
                         .withPosition(8, 0)
                         .withSize(2, 4),
-                Mk4SwerveModuleHelper.GearRatio.L4,
+                Mk3SwerveModuleHelper.GearRatio.FAST,
                 Constants.DRIVETRAIN_BACK_RIGHT_DRIVE_MOTOR,
                 Constants.DRIVETRAIN_BACK_RIGHT_ANGLE_MOTOR,
                 Constants.DRIVETRAIN_BACK_RIGHT_ENCODER_PORT,

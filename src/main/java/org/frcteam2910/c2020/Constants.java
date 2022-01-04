@@ -16,10 +16,10 @@ public class Constants {
     public static final int DRIVETRAIN_BACK_LEFT_ENCODER_PORT = 3;
     public static final int DRIVETRAIN_BACK_RIGHT_ENCODER_PORT = 0;
 
-    public static final double DRIVETRAIN_FRONT_LEFT_ENCODER_OFFSET = -Math.toRadians(76.3);
-    public static final double DRIVETRAIN_FRONT_RIGHT_ENCODER_OFFSET = -Math.toRadians(254.1);
-    public static final double DRIVETRAIN_BACK_LEFT_ENCODER_OFFSET = -Math.toRadians(249.5);
-    public static final double DRIVETRAIN_BACK_RIGHT_ENCODER_OFFSET = -Math.toRadians(136.5);
+    public static final double DRIVETRAIN_FRONT_LEFT_ENCODER_OFFSET = -Math.toRadians(76.2); //76.3
+    public static final double DRIVETRAIN_FRONT_RIGHT_ENCODER_OFFSET = -Math.toRadians(254); //254.1
+    public static final double DRIVETRAIN_BACK_LEFT_ENCODER_OFFSET = -Math.toRadians(249); //249.5
+    public static final double DRIVETRAIN_BACK_RIGHT_ENCODER_OFFSET = -Math.toRadians(136); //136.5
 
     public static final int PRIMARY_CONTROLLER_PORT = 0;
 
